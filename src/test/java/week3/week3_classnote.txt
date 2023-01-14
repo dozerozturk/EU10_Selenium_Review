@@ -1,0 +1,42 @@
+ syntax of css
+ 1.tagName[attributeName='Value']
+
+2. second way of providing syntax, this one used only for id or className
+tagName.classValue    or   tagName#id
+ if you use class value, you have to replace the space(if there is) with .    
+
+ sometimes we need to locate one element then go to child element, this time, we have to use > sign
+ div.example>form
+ in the css, we can go from parent to child, but we CAN NOT go from child to parent.        
+
+ using index number in Css locator
+ if we have more than one same type of elements, we can use indexing
+ css locator:nth-of-type(index number)  --> index number is starting from 1
+ select#state>option:nth-of-type(4)
+
+ xpath is another custom locators
+ we have two types of syntax of xpath
+ 1. absolute xpath
+ it starts with single slash ( / ), starts from html tag, go down the element you want to locate , step by step
+
+
+2. relative xpath
+    //tagName[@attributeName='value']
+ frequently used syntax
+      
+            tagName[contains(@attribute, 'value’)]
+            tagName[.='text'] (same as //tagName[text()='text’], . represents text)
+            *[@attribute='value’] ( use * when we don't want use tag name)
+            *[@*='*']
+        
+
+
+      
+         in xpath, we also can go from parent to child, use /
+         in xpath, we can go from CHILD to PARENT, use /..
+         in xpath, we also can use siblings method, to select by siblings
+         //option[.='Colorado']/preceding-sibling::option
+         //option[.='Colorado']/following-sibling::option
+         we can provide index number in [], starting from 1
+         //option[.='Colorado']/following-sibling::option[1]
+         (//option[.='Colorado']/following-sibling::option)[1]
