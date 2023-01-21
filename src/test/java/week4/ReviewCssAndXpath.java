@@ -23,7 +23,7 @@ public class ReviewCssAndXpath {
           div.radio h1     second way is using a space
           nth-of-type(index number)
           2, xpath locator
-          1) absolute xpath -- start from the first element (which is html)
+          1) absoulute xpath -- start from the first element (which is html)
           then go to your element step by step
            start with /, continue with /
            2) relative xpath -- start wherever you want
@@ -35,6 +35,13 @@ public class ReviewCssAndXpath {
             //tagName[.='text'] (same as //tagName[text()='text’], . represents text)
             //*[@attribute='value’] ( use * when we don't want use tag name)
             go from parent to child
+            we use / to go from parent to child
+            //tagName[@attribute='value']/tagName
+            we also can go from child to parent using /..
+            childElement/..    //li[@class='list-group-item']/..
+            we can go between siblings using /preceding  or following siblings method
+            following-sibling::tagName
+            preceding-sibling::tagName
          */
 
     }
