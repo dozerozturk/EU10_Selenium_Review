@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.*;
 import org.testng.*;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class BrowserUtils {
 
@@ -65,7 +66,7 @@ public class BrowserUtils {
     Creating a utility method for ExplicitWait, so we don't have to repeat the lines
      */
     public static void waitForInvisibilityOf(WebElement webElement){
-        //Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 //        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
 //        wait.until(ExpectedConditions.invisibilityOf(webElement));
     }
