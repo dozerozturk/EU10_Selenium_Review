@@ -75,7 +75,6 @@ public class ActionsTest extends TestBase {
         actions.sendKeys(Keys.SHIFT).perform();
         Thread.sleep(2000);
 
-
     }
 
 
